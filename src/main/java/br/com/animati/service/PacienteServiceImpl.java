@@ -1,39 +1,37 @@
-package br.com.animati;
+package br.com.animati.service;
 
-import java.util.ArrayList;
 import java.util.List;
+
+import br.com.animati.dao.PacienteDAO;
+import br.com.animati.dao.PacienteDAOImpl;
+import br.com.animati.entity.Paciente;
 
 public class PacienteServiceImpl implements PacienteService {
 	
-	private List<Paciente> listaDePacientes;
+	//REFACTORY!!!!!!!
+	
+	private PacienteDAO dao;
 	
 	public PacienteServiceImpl() {
-		listaDePacientes = new ArrayList<Paciente>();
+		dao = new PacienteDAOImpl();
 	}
 
 	public void add(Paciente p) {
-		listaDePacientes.add(p);
+		dao.add(p);
 	}
 
 	public void edit(Paciente p) {
-		boolean encontrou = true;
-		int indice = 0;
-		do {
-			if (listaDePacientes.get(indice).getIdPaciente() == p.getIdPaciente()) {
-				listaDePacientes.set(indice, p);
-				encontrou = false;
-			}
-			indice++;
-			
-		} while (encontrou);
+		
 		
 	}
 
 	public List<Paciente> list() {
-		return listaDePacientes;
+		return null;
+		//return listaDePacientes;
 	}
 
 	public void delete(long idPaciente) {
+		/*
 		boolean encontrou = true;
 		int indice = 0;
 		do {
@@ -44,9 +42,11 @@ public class PacienteServiceImpl implements PacienteService {
 			indice++;
 			
 		} while (encontrou);
+		*/
 	}
 
 	public Paciente findById(long idPaciente) {
+		/*
 		Paciente paciente = null;
 		boolean encontrou = true;
 		int indice = 0;
@@ -60,10 +60,12 @@ public class PacienteServiceImpl implements PacienteService {
 		} while (encontrou);
 		
 		return paciente;
+		*/
+		return null;
 	}
 
 	public void limparLista() {
-		listaDePacientes.clear();
+		//listaDePacientes.clear();
 	}
 	
 }

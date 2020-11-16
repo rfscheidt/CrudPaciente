@@ -1,4 +1,4 @@
-package br.com.animati;
+package br.com.animati.entity;
 
 public class Paciente {
 	

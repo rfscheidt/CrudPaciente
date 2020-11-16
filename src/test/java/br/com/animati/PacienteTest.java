@@ -7,6 +7,10 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import br.com.animati.entity.Paciente;
+import br.com.animati.service.PacienteService;
+import br.com.animati.service.PacienteServiceImpl;
+
 public class PacienteTest {
 	
 	private PacienteService pacienteService;

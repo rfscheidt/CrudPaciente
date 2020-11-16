@@ -1,6 +1,8 @@
-package br.com.animati;
+package br.com.animati.service;
 
 import java.util.List;
+
+import br.com.animati.entity.Paciente;
 
 public interface PacienteService {
 	
